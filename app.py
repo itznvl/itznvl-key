@@ -590,7 +590,7 @@ def admin():
         return render_template_string(ADMIN, authed=False, err=None)
 
     rows = q("SELECT key, hwid, activated, expiry, note, ip FROM keys "
-             "ORDER BY claimed_at DESC, key ASC", fetch="all") or []
+             "ORDER BY key ASC LIMIT 500", fetch="all") or []
 
     now = int(time.time())
     keys_out = []
