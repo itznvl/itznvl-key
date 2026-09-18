@@ -14,3 +14,7 @@ services:
         generateValue: true
       - key: KEY_DAYS
         value: "1"
+      - key: TURSO_URL
+        value: libsql://itznvl-keys-itznvl.aws-ap-northeast-1.turso.io
+      - key: TURSO_TOKEN
+        sync: false
